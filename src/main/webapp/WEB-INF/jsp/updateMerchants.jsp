@@ -1,6 +1,6 @@
-<%@page import="org.kliakhin.hometask.merchant.Merchant"%>
-<%@ page import="org.kliakhin.hometask.merchant.MerchantService" %>
-<%@ page import="org.kliakhin.hometask.payment.PaymentService" %>
+<%@page import="org.kliakhin.hometask.entity.Merchant"%>
+<%@ page import="org.kliakhin.hometask.service.MerchantService" %>
+<%@ page import="org.kliakhin.hometask.service.PaymentService" %>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -20,7 +20,7 @@
 		for (Merchant merchant : merchantService.findAll()) {
 			merchantService.updateToStart(merchant.getId(), paymentService.getMerchantCash(merchant.getId()));
 		}
-		response.sendRedirect("merchantList.jsp");
+		response.sendRedirect("merchants.jsp");
 	%>
 </body>
 </html>

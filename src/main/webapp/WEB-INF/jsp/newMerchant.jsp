@@ -1,7 +1,7 @@
 <%@page import="java.sql.Date"%>
 <%@page import="java.time.LocalDate"%>
-<%@ page import="org.kliakhin.hometask.merchant.Merchant" %>
-<%@ page import="org.kliakhin.hometask.merchant.MerchantService" %>
+<%@ page import="org.kliakhin.hometask.entity.Merchant" %>
+<%@ page import="org.kliakhin.hometask.service.MerchantService" %>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -28,7 +28,7 @@
 			LocalDate lastSent = LocalDate.now();
 			merchant.setLastSent(Date.valueOf(lastSent.minusYears(1)));
 			merchantService.save(merchant);
-			response.sendRedirect("merchantList.jsp");
+			response.sendRedirect("merchants.jsp");
 		%>
 </body>
 

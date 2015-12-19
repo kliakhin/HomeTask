@@ -2,6 +2,8 @@ package org.kliakhin.hometask.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 
 /**
  * @author kliakhin.yevgen
@@ -11,8 +13,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 public class LoginPageController {
 
-    @RequestMapping("/login")
-    public String login() {
+    @RequestMapping(value = "/login")
+    public String login(@RequestParam("cash")int cash) {
         return "login";
     }
 }

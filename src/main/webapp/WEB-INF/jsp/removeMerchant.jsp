@@ -1,4 +1,4 @@
-<%@ page import="org.kliakhin.hometask.merchant.MerchantService" %>
+<%@ page import="org.kliakhin.hometask.service.MerchantService" %>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 		 pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -14,7 +14,7 @@
 		MerchantService merchantService = (MerchantService) context
 				.getBean("merchantServiceImpl");
 		merchantService.remove(Integer.parseInt(request.getParameter("id")));
-		response.sendRedirect("merchantList.jsp");
+		response.sendRedirect("merchants.jsp");
 	%>
 </body>
 </html>

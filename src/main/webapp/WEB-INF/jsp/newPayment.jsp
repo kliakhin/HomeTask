@@ -1,8 +1,8 @@
 <%@page import="java.time.LocalDateTime"%>
 <%@page import="java.sql.Timestamp"%>
-<%@ page import="org.kliakhin.hometask.merchant.MerchantService" %>
-<%@ page import="org.kliakhin.hometask.payment.PaymentService" %>
-<%@ page import="org.kliakhin.hometask.payment.Payment" %>
+<%@ page import="org.kliakhin.hometask.service.MerchantService" %>
+<%@ page import="org.kliakhin.hometask.service.PaymentService" %>
+<%@ page import="org.kliakhin.hometask.entity.Payment" %>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -34,7 +34,7 @@
 		payment.setChargePayed(chargePayed);
 		paymentService.save(payment);
 		merchantService.updateNeddToSend(merchantId, sumPayed - chargePayed);
-		response.sendRedirect("paymentList.jsp");
+		response.sendRedirect("payments.jsp");
 	%>
 </body>
 

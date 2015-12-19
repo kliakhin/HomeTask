@@ -1,5 +1,5 @@
-<%@page import="org.kliakhin.hometask.transmoney.Transmoney"%>
-<%@ page import="org.kliakhin.hometask.transmoney.TransmoneyService" %>
+<%@page import="org.kliakhin.hometask.entity.Transmoney"%>
+<%@ page import="org.kliakhin.hometask.service.TransmoneyService" %>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -19,7 +19,7 @@
 				transmoneyService.remove(transmoney.getId());
 			}
 		}
-		response.sendRedirect("transMoneyList.jsp");
+		response.sendRedirect("transmoneys.jsp");
 	%>
 </body>
 </html>

@@ -1,7 +1,7 @@
 package org.kliakhin.hometask.controller;
 
-import org.kliakhin.hometask.customer.Customer;
-import org.kliakhin.hometask.customer.CustomerService;
+import org.kliakhin.hometask.entity.Customer;
+import org.kliakhin.hometask.service.CustomerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

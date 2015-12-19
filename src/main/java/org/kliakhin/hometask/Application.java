@@ -8,17 +8,17 @@ import java.util.List;
 import javax.inject.Inject;
 import javax.inject.Named;
 
-import org.kliakhin.hometask.merchant.Merchant;
-import org.kliakhin.hometask.merchant.MerchantService;
-import org.kliakhin.hometask.payment.Payment;
-import org.kliakhin.hometask.transmoney.TransmoneyService;
+import org.kliakhin.hometask.entity.Merchant;
+import org.kliakhin.hometask.service.MerchantService;
+import org.kliakhin.hometask.entity.Payment;
+import org.kliakhin.hometask.service.TransmoneyService;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-import org.kliakhin.hometask.customer.Customer;
-import org.kliakhin.hometask.customer.CustomerService;
-import org.kliakhin.hometask.payment.PaymentService;
-import org.kliakhin.hometask.transmoney.Transmoney;
+import org.kliakhin.hometask.entity.Customer;
+import org.kliakhin.hometask.service.CustomerService;
+import org.kliakhin.hometask.service.PaymentService;
+import org.kliakhin.hometask.entity.Transmoney;
 
 @Named
 public class Application {

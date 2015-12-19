@@ -12,15 +12,15 @@
 	<jsp:include page="../header.jsp"/>
 	<h1>Customer List</h1>
 	<table>
-		<tr>
-			<td>ID</td>
-			<td>Name</td>
-			<td>Address</td>
-			<td>Email</td>
-			<td>ccNO</td>
-			<td>ccType</td>
-			<td>Maturity</td>
-		</tr>
+        <tr>
+            <td>ID
+            <td>Name
+            <td>Address
+            <td>Email
+            <td>ccNo
+            <td>ccType
+            <td>Maturity
+        </tr>
 		<c:forEach items="${customers}" var="item">
 			<tr>
 				<td><c:out value="${item.id}" /></td>
