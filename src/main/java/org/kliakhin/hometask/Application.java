@@ -33,14 +33,9 @@ public class Application {
 
 	@SuppressWarnings("resource")
 	public static void main(String[] args) {
-		ApplicationContext context = new ClassPathXmlApplicationContext("spring/application-config.xml");
+		ApplicationContext context = new ClassPathXmlApplicationContext("WEB-INF/spring/application-config.xml");
 		Application application = (Application) context.getBean("application");
-		application.printTrans();
 
-	}
-	
-	public void printTrans() {
-		transMoneyService.findWithFalseStatus(10);
 	}
 
 	public void printMerchantName(int id) {

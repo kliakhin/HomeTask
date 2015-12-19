@@ -1,82 +1,91 @@
 package org.kliakhin.hometask.customer;
 
 import javax.persistence.*;
+import java.sql.Date;
 
 @Entity
 public class Customer {
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int id;
-	private String name;
-	private String address;
-	private String email;
-	private String ccNO;
-	private String ccType;
-	private java.sql.Date maturity;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int id;
+    private String name;
+    private String address;
+    private String email;
+    private String ccNO;
+    private String ccType;
+    private Date maturity;
 
-	public Customer() {
+    public Customer() {
 
-	}
+    }
 
-	public String getDataForWeb() {
-		String ret = "<tr><td>" + id + "<td>" + name + "<td>" + address + "<td>" + email + "<td>" + ccNO + "<td>"
-				+ ccType + "</tr>";
-		return ret;
-	}
+    public int getId() {
+        return id;
+    }
 
-	public int getId() {
-		return id;
-	}
+    public void setId(int id) {
+        this.id = id;
+    }
 
-	public void setId(int id) {
-		this.id = id;
-	}
+    public String getName() {
+        return name;
+    }
 
-	public String getName() {
-		return name;
-	}
+    public void setName(String name) {
+        this.name = name;
+    }
 
-	public void setName(String name) {
-		this.name = name;
-	}
+    public String getAddress() {
+        return address;
+    }
 
-	public String getAddress() {
-		return address;
-	}
+    public void setAddress(String address) {
+        this.address = address;
+    }
 
-	public void setAddress(String address) {
-		this.address = address;
-	}
+    public String getEmail() {
+        return email;
+    }
 
-	public String getEmail() {
-		return email;
-	}
+    public void setEmail(String email) {
+        this.email = email;
+    }
 
-	public void setEmail(String email) {
-		this.email = email;
-	}
+    public String getCcNO() {
+        return ccNO;
+    }
 
-	public String getCcNO() {
-		return ccNO;
-	}
+    public void setCcNO(String ccNO) {
+        this.ccNO = ccNO;
+    }
 
-	public void setCcNO(String ccNO) {
-		this.ccNO = ccNO;
-	}
+    public String getCcType() {
+        return ccType;
+    }
 
-	public String getCcType() {
-		return ccType;
-	}
+    public void setCcType(String ccType) {
+        this.ccType = ccType;
+    }
 
-	public void setCcType(String ccType) {
-		this.ccType = ccType;
-	}
+    public Date getMaturity() {
+        return maturity;
+    }
 
-	public java.sql.Date getMaturity() {
-		return maturity;
-	}
+    public void setMaturity(Date maturity) {
+        this.maturity = maturity;
+    }
 
-	public void setMaturity(java.sql.Date maturity) {
-		this.maturity = maturity;
-	}
+    @Override
+    public String
+	toString() {
+        return "Customer{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", address='" + address + '\'' +
+                ", email='" + email + '\'' +
+                ", ccNO='" + ccNO + '\'' +
+                ", ccType='" + ccType + '\'' +
+                ", maturity=" + maturity +
+                '}';
+    }
 }

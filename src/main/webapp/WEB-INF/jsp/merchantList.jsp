@@ -13,7 +13,7 @@
 	<ul>
 		<li><a class="active" href="../menu.html">Home</a></li>
 		<li><a href="merchantList.jsp">MerchantList</a></li>
-		<li><a href="customerList.jsp">CustomerList</a></li>
+		<li><a href="customer/customers.jsp">CustomerList</a></li>
 		<li><a href="paymentList.jsp">PaymentList</a></li>
 		<li><a href="transMoneyList.jsp">TransMoneyList</a></li>
 		<ul style="float: right; list-style-type: none;">
@@ -38,7 +38,7 @@
 		</tr>
 		<%
 			org.springframework.context.ApplicationContext context = new org.springframework.context.support.ClassPathXmlApplicationContext(
-					"spring/application-config.xml");
+					"WEB-INF/spring/application-config.xml");
 			MerchantService merchantService = (MerchantService) context
 					.getBean("merchantServiceImpl");
 			java.util.List<Merchant> list = merchantService.findAll();

@@ -12,7 +12,7 @@
 <body>
 	<%
 		org.springframework.context.ApplicationContext context = new org.springframework.context.support.ClassPathXmlApplicationContext(
-				"spring/application-config.xml");
+				"WEB-INF/spring/application-config.xml");
 		MerchantService merchantService = (MerchantService) context
 				.getBean("merchantServiceImpl");
 		PaymentService paymentService = (PaymentService) context

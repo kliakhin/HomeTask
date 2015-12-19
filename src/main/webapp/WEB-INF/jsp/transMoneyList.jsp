@@ -21,7 +21,7 @@
 		</tr>
 		<%
 			org.springframework.context.ApplicationContext context = new org.springframework.context.support.ClassPathXmlApplicationContext(
-					"spring/application-config.xml");
+					"WEB-INF/spring/application-config.xml");
 			TransmoneyService transmoneyService = (TransmoneyService) context
 					.getBean("transmoneyServiceImpl");
 			java.util.List<Transmoney> list = transmoneyService.findAll();

@@ -4,11 +4,11 @@
 <head>
 <meta charset="UTF-8">
 <title>Login Page</title>
-<link rel="stylesheet" type="text/css" href="css/style.css" />         
+<link rel="stylesheet" type="text/css" href="../../css/style.css" />
 </head>
 <body>
 <ul>
-		<li><a class="active" href="..//menu.html">Home</a></li>
+		<li><a class="active" href="../menu.html">Home</a></li>
 		<li><a href="jsp/merchantList.jsp">MerchantList</a></li>
 		<li><a href="jsp/customerList.jsp">CustomerList</a></li>
 		<li><a href="jsp/paymentList.jsp">PaymentList</a></li>

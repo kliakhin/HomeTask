@@ -23,7 +23,7 @@
 		</tr>
 		<%
 			org.springframework.context.ApplicationContext context = new org.springframework.context.support.ClassPathXmlApplicationContext(
-					"spring/application-config.xml");
+					"WEB-INF/spring/application-config.xml");
 			PaymentService paymentService = (PaymentService) context
 					.getBean("paymentServiceImpl");
 			java.util.List<Payment> list = paymentService.findAll();

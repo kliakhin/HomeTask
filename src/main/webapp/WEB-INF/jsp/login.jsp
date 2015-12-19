@@ -10,7 +10,7 @@
 <body>
 	<%
 		if (request.getParameter("psw").equals("1234") && request.getParameter("login").equals("1234")) {
-		response.sendRedirect("..//menu.html");
+		response.sendRedirect("..//menu.jsp");
 		} else if (request.getParameter("psw").equals("123456")) {
 			out.println("<h1> Wrong login! </h1>");
 	%>
