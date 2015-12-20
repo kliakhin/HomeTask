@@ -37,4 +37,10 @@ public class CustomerController {
         customerService.save(customer);
         return "redirect:/customer/";
     }
+
+    @RequestMapping(value = "/remove", method = RequestMethod.POST)
+    public String removeCustomer(String id) {
+        customerService.remove(Integer.parseInt(id));
+        return "redirect:/customer/";
+    }
 }

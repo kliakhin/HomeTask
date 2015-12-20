@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,7 +8,7 @@
 </head>
 <body>
 	<h1>New Payment</h1>
-	<form action="jsp/newPayment.jsp" method="POST">
+	<form action="<c:url value="/payment/add"/>" method="POST">
 		<table>
 			<tr>
 				<td>MerchantId:

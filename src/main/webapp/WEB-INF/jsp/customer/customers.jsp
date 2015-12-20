@@ -35,5 +35,10 @@
 	</table>
 	<a href="<c:url value="/"/>" class="button">Home</a>
 	<a href="<c:url value="/customer/create"/>" class="button">Add new customer</a>
+	<form action="<c:url value="/customer/remove"/>" method="POST">
+		Remove Customer
+		<input type="text" name="id">
+		<input type="submit" value="Submit"/>
+	</form>>
 </body>
 </html>

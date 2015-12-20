@@ -5,6 +5,7 @@ import java.util.List;
 
 import javax.inject.*;
 
+import org.kliakhin.hometask.comporators.TransmoneyComparator;
 import org.kliakhin.hometask.entity.Transmoney;
 import org.kliakhin.hometask.dao.TransmoneyDao;
 import org.springframework.transaction.annotation.Transactional;
@@ -32,7 +33,10 @@ public class TransmoneyServiceImpl implements TransmoneyService {
 	@Override
 	public List<Transmoney> findWithFalseStatus() {
 		List<Transmoney> list = trasnMoneyDao.findWithFalseStatus();
-		Collections.sort(list, new Transmoney());
+		Collections.sort(list, new TransmoneyComparator());
+		list.forEach(transmoney -> {
+			System.out.println(transmoney.getSumSent() + " - sum !!! date " + transmoney.getSentDate());
+		});
 		return list;
 	}
 
@@ -44,7 +48,6 @@ public class TransmoneyServiceImpl implements TransmoneyService {
 	@Transactional
 	public void remove(int id) {
 		trasnMoneyDao.remove(id);
-
 	}
 
 	@Transactional

@@ -43,7 +43,12 @@
 	</table>
 	<a href="<c:url value="/"/>" class="button">Home</a>
 	<a href="<c:url value="/merchant/create"/>" class="button">Add new customer</a>
-	<a href="../updateMerchants.jsp">Update to start</a>
-	<br>
+	<a href="<c:url value="/merchant/reset"/>" class="button">Reset merchant list(test)</a>
+	<a href="<c:url value="/merchant/resetdate"/>" class="button">Reset date(test)</a>
+	<form action="<c:url value="/merchant/remove"/>" method="POST">
+		Remove Merchant
+		<input type="text" name="id">
+		<input type="submit" value="Submit"/>
+	</form>
 </body>
 </html>

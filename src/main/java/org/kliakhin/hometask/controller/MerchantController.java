@@ -2,6 +2,7 @@ package org.kliakhin.hometask.controller;
 
 import org.kliakhin.hometask.entity.Merchant;
 import org.kliakhin.hometask.service.MerchantService;
+import org.kliakhin.hometask.service.PaymentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -23,6 +24,8 @@ public class MerchantController {
 
     @Autowired
     private MerchantService merchantService;
+    @Autowired
+    private PaymentService paymentService;
 
     @RequestMapping({"", "/"})
     public String all(Model model) {
@@ -42,5 +45,29 @@ public class MerchantController {
         merchantService.save(merchant);
         return "redirect:/merchant/";
     }
+
+    @RequestMapping(value = "/remove", method = RequestMethod.POST)
+    public String removeMerchant(String id) {
+        merchantService.remove(Integer.parseInt(id));
+        return "redirect:/merchant/";
+    }
+
+    @RequestMapping("/reset")
+    public String resetMerchants() {
+        for (Merchant merchant : merchantService.findAll()) {
+            merchantService.updateToStart(merchant.getId(), paymentService.getMerchantCash(merchant.getId()));
+        }
+        return "redirect:/merchant/";
+    }
+
+    @RequestMapping("/resetdate")
+    public String resetMerchantsDate() {
+        for (Merchant merchant : merchantService.findAll()) {
+            merchantService.updateLastSent(merchant.getId(), Date.valueOf(merchant.getLastSent().toLocalDate().minusYears(1)));
+        }
+        return "redirect:/merchant/";
+    }
+
+
 }
 

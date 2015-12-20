@@ -33,8 +33,10 @@ public class CustomerDaoImpl implements CustomerDao {
 
 	@Override
 	public void remove(int id) {
-		// TODO Auto-generated method stub
-		
+		Customer customer = em.find(Customer.class, id);
+		if (customer != null) {
+			em.remove(customer);
+		}
 	}
 
 	@Override
